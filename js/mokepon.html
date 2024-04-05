@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mokepon</title>
+    <link rel="stylesheet" href="/.vscode/js/estilos/style.css" />
+  </head>
+
+  <body>
+    <section id="seleccionar-mascota">
+      <h1>Mokepon!</h1>
+      <h2 class="subtitulos">Elige tu mascota</h2>
+
+      <div id="contenedor-tarjetas" class="tarjetas"></div>
+
+      <button id="boton-mascota">seleccionar</button>
+    </section>
+
+    <section id="ver-mapa">
+      <h2 class="subtitulos">Recorre el mapa con tu mokepon</h2>
+      <canvas id="mapa"></canvas>
+      <button onmousedown="moverArriba()" onmouseup="detenerMovimiento()">
+        Arriba
+      </button>
+      <div>
+        <button onmousedown="moverIzquierda()" onmouseup="detenerMovimiento()">
+          Izquierda
+        </button>
+        <button onmousedown="moverAbajo()" onmouseup="detenerMovimiento()">
+          Abajo
+        </button>
+        <button onmousedown="moverDerecha()" onmouseup="detenerMovimiento()">
+          Derecha
+        </button>
+      </div>
+    </section>
+
+    <section id="Seleccionar-ataque">
+      <h1>Mokepon!</h1>
+      <h2 class="subtitulos">Elige tu ataque</h2>
+
+      <div id="contenedor-ataques" class="tarjetas-ataques"></div>
+
+      <div id="mensajes">
+        <p id="resultado">suerte !!! 😁</p>
+        <section id="reiniciar">
+          <button id="boton-reiniciar">Reiniciar</button>
+        </section>
+      </div>
+
+      <div class="ataques">
+        <div class="ataques-jugador">
+          <p id="mascota-jugador"></p>
+          <p id="vidas-jugador">0</p>
+          <div id="ataque-jugador"></div>
+        </div>
+        <div class="ataques-enemigo">
+          <p id="mascota-enemigo"></p>
+          <p id="vidas-enemigo">0</p>
+          <div id="ataque-enemigo"></div>
+        </div>
+      </div>
+    </section>
+    <script src="/.vscode/js/js/mokepon.js" defer></script>
+  </body>
+</html>
